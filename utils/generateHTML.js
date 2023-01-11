@@ -5,8 +5,30 @@ const manager = require ('./lib/manager.js');
 const card = [];
 
 function createCard(team) {
-    
-}
+    for(i = 0; i < team.length; i++) {
+        if (team[i].userRole() === 'Intern') {
+            let cards = createIntern(team[i]);
+            card.unshift(cards);
+        }
+    };
+
+    for(i = 0; i < team.length; i++) {
+        if (team[i].userRole() === 'Engineer') {
+            let cards = createEngineer(team[i]);
+            card.unshift(cards);
+        }
+    };
+
+    for(i = 0; i < team.length; i++) {
+        if (team[i].userRole() === 'Manager') {
+            let cards = createManager(team[i]);
+            card.unshift(cards);
+        }
+    }
+
+    const showPage = displayPage(card);
+    return showPage;
+};
 
 function cardIntern(employee) {
     return `<div class="card" style="width: 16rem; border-radius: 0;>

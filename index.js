@@ -21,4 +21,4 @@ function teamBuilder() {
                 console.log(data);
             }
         })
-}
+};
