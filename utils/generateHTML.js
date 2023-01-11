@@ -12,7 +12,7 @@ function cardIntern(employee) {
     return `<div class="card" style="width: 16rem; border-radius: 0;>
     <section style="background-color: gray; color: white; padding: 5px 8px; margin: 0; height: 75px;">
         <p style="margin: 2px 5px;">${employee.name}</p>
-        <p style="margin: 0 0 5px;"><i class="bi-cup-hot-fill"></i>${employee.userRole()}<p>
+        <p style="margin: 0 0 5px;"><i class="bi bi-mortarboard-fill"></i>${employee.userRole()}<p>
     </section>
     <div class="card-body bg-light" style="padding: 30px 15px;">
         <div class="d-block" style="margin: 0;">
@@ -31,7 +31,7 @@ function cardEngineer(employee) {
     return `<div class="card" style="width: 16rem; border-radius: 0;>
     <section style="background-color: gray; color: white; padding: 5px 8px; margin: 0; height: 75px;">
         <p style="margin: 2px 5px;">${employee.name}</p>
-        <p style="margin: 0 0 5px;"><i class="bi-cup-hot-fill"></i>${employee.userRole()}<p>
+        <p style="margin: 0 0 5px;"><i class="bi bi-eyeglasses"></i>${employee.userRole()}<p>
     </section>
     <div class="card-body bg-light" style="padding: 30px 15px;">
         <div class="d-block" style="margin: 0;">
@@ -50,7 +50,7 @@ function cardManager(employee) {
     return `<div class="card" style="width: 16rem; border-radius: 0;>
     <section style="background-color: gray; color: white; padding: 5px 8px; margin: 0; height: 75px;">
         <p style="margin: 2px 5px;">${employee.name}</p>
-        <p style="margin: 0 0 5px;"><i class="bi-cup-hot-fill"></i>${employee.userRole()}<p>
+        <p style="margin: 0 0 5px;"><i class="bi bi-cup-hot-fill"></i>${employee.userRole()}<p>
     </section>
     <div class="card-body bg-light" style="padding: 30px 15px;">
         <div class="d-block" style="margin: 0;">
@@ -64,3 +64,30 @@ function cardManager(employee) {
     </div>
 </div>`
 }; 
+
+function displayPage (card) {
+    return `<!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Team Profile</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    
+    <body>
+        <div class="text-white text-center" style="height: 50px; background-color: red;">
+            <h1 class="text-center" style="padding: 10px;">Team Profile</h1>
+        </div>
+        <main class="d-flex" style="justify-content: center; flex-wrap: wrap; margin: 40px auto; gap: 5px; width: 55%;">
+        ${card.join('')}
+        </main>
+    </body>
+    
+    </html>`
+};
