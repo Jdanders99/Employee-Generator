@@ -83,8 +83,38 @@ function newEngineer(data) {
         }
     ])
         .then((response) => {
-            const engineer = new Engineer(response.name, response.id, response.email, response.school);
+            const engineer = new Engineer(response.name, response.id, response.email, response.github);
             team.push(engineer);
+            teamBuilder();
+        })
+};
+
+function newManager(data) {
+    inquirer.prompt([
+        {
+            type: 'input',
+            message: 'What is the managers name?',
+            name: 'name'
+        },
+        {
+            type: 'input',
+            message: 'What is the managers employee ID?',
+            name: 'id'
+        },
+        {
+            type: 'input',
+            message: 'What is the managers email?',
+            name: 'email'
+        },
+        {
+            type: 'input',
+            message: 'What is the managers office number?',
+            name: 'ofcNum'
+        }
+    ])
+        .then((response) => {
+            const manager = new Manager(response.name, response.id, response.email, response.ofcNum);
+            team.push(manager);
             teamBuilder();
         })
 };
