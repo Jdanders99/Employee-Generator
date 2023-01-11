@@ -7,4 +7,18 @@ const fs = reqiure('fs');
 const generateHTML = require('./utils/generateHTML.js');
 const team = [];
 
-
+function teamBuilder() {
+    inquirer.prompt([
+        {
+            type: 'list',
+            message: 'What role would you like to select?',
+            choices: ['Intern', 'Engineer', 'Manager', 'None'],
+            name: 'employeeType'
+        }
+    ])
+        .then((data) => {
+            if (data.employeeType === 'Intern') {
+                console.log(data);
+            }
+        })
+}
