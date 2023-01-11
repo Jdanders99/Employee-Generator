@@ -91,3 +91,5 @@ function displayPage (card) {
     
     </html>`
 };
+
+module.exports = createCard;
