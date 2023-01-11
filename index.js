@@ -58,3 +58,33 @@ function newIntern(data) {
             teamBuilder();
         })
 };
+
+function newEngineer(data) {
+    inquirer.prompt([
+        {
+            type: 'input',
+            message: 'What is the engineers name?',
+            name: 'name'
+        },
+        {
+            type: 'input',
+            message: 'What is the engineers employee ID?',
+            name: 'id'
+        },
+        {
+            type: 'input',
+            message: 'What is the engineers email?',
+            name: 'email'
+        },
+        {
+            type: 'input',
+            message: 'What is the engineers GitHub username?',
+            name: 'github'
+        }
+    ])
+        .then((response) => {
+            const engineer = new Engineer(response.name, response.id, response.email, response.school);
+            team.push(engineer);
+            teamBuilder();
+        })
+};
