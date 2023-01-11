@@ -18,7 +18,13 @@ function teamBuilder() {
     ])
         .then((data) => {
             if (data.employeeType === 'Intern') {
-                console.log(data);
+                newIntern(data);
+            } else if (data.employeeType === 'Engineer') {
+                newEngineer(data);
+            } else if (data.employeeType === 'Manager') {
+                newManager(data);
+            } else {
+                buildTeam(team);
             }
         })
 };
