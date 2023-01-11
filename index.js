@@ -22,3 +22,33 @@ function teamBuilder() {
             }
         })
 };
+
+function newIntern(data) {
+    inquirer.prompt([
+        {
+            type: 'input',
+            message: 'What is the interns name?',
+            name: 'name'
+        },
+        {
+            type: 'input',
+            message: 'What is the interns employee ID?',
+            name: 'id'
+        },
+        {
+            type: 'input',
+            message: 'What is the interns email?',
+            name: 'email'
+        },
+        {
+            type: 'input',
+            message: 'What school does the intern go to?',
+            name: 'school'
+        }
+    ])
+        .then((response) => {
+            const intern = new Intern(response.name, response.id, response.email, response.school);
+            team.push(intern);
+            teamBuilder();
+        })
+};
