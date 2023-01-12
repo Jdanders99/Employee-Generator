@@ -1,4 +1,6 @@
 const Intern = require('../lib/intern');
+const fs = require("fs");
+jest.mock("fs");
 
 describe('intern', () => {
     describe('initialization', () => {

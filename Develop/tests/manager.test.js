@@ -1,4 +1,6 @@
 const Manager = require('../lib/manager');
+const fs = require("fs");
+jest.mock("fs");
 
 describe('manager', () => {
     describe('initialization', () => {

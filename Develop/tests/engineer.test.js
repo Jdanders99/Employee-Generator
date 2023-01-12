@@ -1,4 +1,6 @@
 const Engineer = require('../lib/engineer');
+const fs = require("fs");
+jest.mock("fs");
 
 describe('engineer', () => {
     describe('initialization', () => {
