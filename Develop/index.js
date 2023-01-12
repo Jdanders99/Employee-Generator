@@ -121,6 +121,8 @@ function newManager(data) {
 function buildTeam(team) {
     const generateHTML = genHtml(team);
 
-    fs.writeFile('./index.html', generateHTML, (err) => 
+    fs.writeFile('index.html', generateHTML, (err) => 
         err ? console.log(err) : console.log('Generated HTML file!'));
 };
+
+teamBuilder();

@@ -31,60 +31,63 @@ function createCard(team) {
 };
 
 function createIntern(employee) {
-    return `<div class="card" style="width: 16rem; border-radius: 0;>
-    <section style="background-color: gray; color: white; padding: 5px 8px; margin: 0; height: 75px;">
+    return `<div class="card" style="width: 16rem; border-radius: 0;">
+    <section style="background-color: blue; color: white; padding: 5px 8px; margin: 0; height: 75px;">
         <p style="margin: 2px 5px;">${employee.name}</p>
         <p style="margin: 0 0 5px;"><i class="bi bi-mortarboard-fill"></i>${employee.userRole()}<p>
     </section>
     <div class="card-body bg-light" style="padding: 30px 15px;">
         <div class="d-block" style="margin: 0;">
-            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 0; padding; 10px 5px;>
+            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 1px; padding: 10px 5px;">
                 ID: ${employee.id}</p>
-            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 0; padding; 10px 5px;>
+            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 1px; padding: 10px 5px;">
                 Email: ${employee.email}</p>
-            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 0; padding; 10px 5px;>
+            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 1px; padding: 10px 5px;">
                 School: ${employee.school}</p>
         </div>
     </div>
-</div>`
+</div>
+`
 }; 
 
 function createEngineer(employee) {
-    return `<div class="card" style="width: 16rem; border-radius: 0;>
-    <section style="background-color: gray; color: white; padding: 5px 8px; margin: 0; height: 75px;">
+    return `<div class="card" style="width: 16rem; border-radius: 0;">
+    <section style="background-color: blue; color: white; padding: 5px 8px; margin: 0; height: 75px;">
         <p style="margin: 2px 5px;">${employee.name}</p>
         <p style="margin: 0 0 5px;"><i class="bi bi-eyeglasses"></i>${employee.userRole()}<p>
     </section>
     <div class="card-body bg-light" style="padding: 30px 15px;">
         <div class="d-block" style="margin: 0;">
-            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 0; padding; 10px 5px;>
+            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 1px; padding: 10px 5px;">
                 ID: ${employee.id}</p>
-            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 0; padding; 10px 5px;>
+            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 1px; padding: 10px 5px;">
                 Email: ${employee.email}</p>
-            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 0; padding; 10px 5px;>
+            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 1px; padding: 10px 5px;">
                 GitHub: ${employee.userGithub()}</p>
         </div>
     </div>
-</div>`
+</div>
+`
 }; 
 
 function createManager(employee) {
-    return `<div class="card" style="width: 16rem; border-radius: 0;>
-    <section style="background-color: gray; color: white; padding: 5px 8px; margin: 0; height: 75px;">
+    return `<div class="card" style="width: 16rem; border-radius: 0;">
+    <section style="background-color: blue; color: white; padding: 5px 8px; margin: 0; height: 75px;">
         <p style="margin: 2px 5px;">${employee.name}</p>
         <p style="margin: 0 0 5px;"><i class="bi bi-cup-hot-fill"></i>${employee.userRole()}<p>
     </section>
     <div class="card-body bg-light" style="padding: 30px 15px;">
         <div class="d-block" style="margin: 0;">
-            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 0; padding; 10px 5px;>
+            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 1px; padding: 10px 5px;">
                 ID: ${employee.id}</p>
-            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 0; padding; 10px 5px;>
+            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 1px; padding: 10px 5px;">
                 Email: ${employee.email}</p>
-            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 0; padding; 10px 5px;>
+            <p style="height: 55px; background-color: white; border:solid 1px blue; margin: 1px; padding: 10px 5px;">
                 Office Number: ${employee.ofcNum}</p>
         </div>
     </div>
-</div>`
+</div>
+`
 }; 
 
 function displayPage (card) {
@@ -103,7 +106,7 @@ function displayPage (card) {
     </head>
     
     <body>
-        <div class="text-white text-center" style="height: 50px; background-color: red;">
+        <div class="text-white text-center" style="height: 80px; background-color: red;">
             <h1 class="text-center" style="padding: 10px;">Team Profile</h1>
         </div>
         <main class="d-flex" style="justify-content: center; flex-wrap: wrap; margin: 40px auto; gap: 5px; width: 55%;">
