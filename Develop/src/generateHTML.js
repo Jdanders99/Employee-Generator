@@ -1,7 +1,7 @@
-const employee = require('../lib/employee.js');
-const engineer = require('../lib/engineer.js');
-const intern = require ('../lib/intern.js');
-const manager = require ('../lib/manager.js');
+const employee = require('../lib/employee');
+const engineer = require('../lib/engineer');
+const intern = require ('../lib/intern');
+const manager = require ('../lib/manager');
 const card = [];
 
 function createCard(team) {
@@ -30,7 +30,7 @@ function createCard(team) {
     return showPage;
 };
 
-function cardIntern(employee) {
+function createIntern(employee) {
     return `<div class="card" style="width: 16rem; border-radius: 0;>
     <section style="background-color: gray; color: white; padding: 5px 8px; margin: 0; height: 75px;">
         <p style="margin: 2px 5px;">${employee.name}</p>
@@ -49,7 +49,7 @@ function cardIntern(employee) {
 </div>`
 }; 
 
-function cardEngineer(employee) {
+function createEngineer(employee) {
     return `<div class="card" style="width: 16rem; border-radius: 0;>
     <section style="background-color: gray; color: white; padding: 5px 8px; margin: 0; height: 75px;">
         <p style="margin: 2px 5px;">${employee.name}</p>
@@ -68,7 +68,7 @@ function cardEngineer(employee) {
 </div>`
 }; 
 
-function cardManager(employee) {
+function createManager(employee) {
     return `<div class="card" style="width: 16rem; border-radius: 0;>
     <section style="background-color: gray; color: white; padding: 5px 8px; margin: 0; height: 75px;">
         <p style="margin: 2px 5px;">${employee.name}</p>

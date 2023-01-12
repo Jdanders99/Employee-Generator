@@ -1,9 +1,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Engineer = require ('./lib/engineer.js');
-const Intern = require('./lib/intern.js');
-const Manager = require('./lib/manager.js');
-const generateHTML = require('./utils/generateHTML.js');
+const Engineer = require ('./lib/engineer');
+const Intern = require('./lib/intern');
+const Manager = require('./lib/manager');
+const genHtml = require('./src/generateHTML')
 const team = [];
 
 function teamBuilder() {
@@ -119,7 +119,7 @@ function newManager(data) {
 };
 
 function buildTeam(team) {
-    const generateHTML = generateHTML(team);
+    const generateHTML = genHtml(team);
 
     fs.writeFile('./index.html', generateHTML, (err) => 
         err ? console.log(err) : console.log('Generated HTML file!'));
