@@ -6,7 +6,7 @@ describe('engineer', () => {
             const engineer = new Engineer('Seth', 3, 'test@something.com', 'Seth3GH');
 
             expect(engineer.name).toEqual('Seth');
-            expect(engineer.id).toEqual('3');
+            expect(engineer.id).toEqual(3);
             expect(engineer.email).toEqual('test@something.com');
             expect(engineer.github).toEqual('Seth3GH');
         })
