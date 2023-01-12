@@ -1,4 +1,4 @@
-# Sample README 
+# Team Builder 
 ![License Badge](https://img.shields.io/badge/license-MIT-orange)
   
 ## Table of Contents
